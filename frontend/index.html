@@ -330,23 +330,6 @@
             appendMessage(turn.answer, 'bot', index);
         }
 
-        // Restore the saved conversation when the page is (re)loaded
-        async function loadHistory() {
-            try {
-                const response = await fetch('/history');
-                const data = await response.json();
-                if (!data.turns || data.turns.length === 0) return;
-                document.getElementById('chatHistory').innerHTML = '';
-                turns = [];
-                appendMessage(WELCOME, 'bot');
-                data.turns.forEach(renderTurn);
-                showDetails(turns[turns.length - 1]);
-                appendMessage(`Restored ${turns.length} earlier message(s) about ${data.file_name || 'your dataset'}. Re-upload the same CSV to keep asking follow-up questions.`, 'bot');
-            } catch (err) {
-                // History is a convenience; ignore failures.
-            }
-        }
-
         async function newChat() {
             try { await fetch('/clear', { method: 'POST' }); } catch (err) { }
             turns = [];
@@ -356,7 +339,7 @@
             document.getElementById('placeholder').style.display = 'block';
         }
 
-        window.addEventListener('DOMContentLoaded', loadHistory);
+        window.addEventListener('DOMContentLoaded', newChat);
 
         function handleFileChange(input) {
             if (input.files && input.files[0]) {

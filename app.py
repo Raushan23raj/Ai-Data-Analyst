@@ -16,9 +16,9 @@ from dotenv import load_dotenv
 app = Flask(__name__, template_folder="frontend")
 # The session cookie only holds a random id; the history itself lives on the server.
 # Set FLASK_SECRET_KEY in .env to keep browsers "logged in" across server restarts.
-load_dotenv(Path(__file__).resolve().parent / ".env")
-load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 app.secret_key = os.environ.get("FLASK_SECRET_KEY") or secrets.token_hex(32)
+
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 openrouter_api_key = os.environ.get("OPENROUTER_API_KEY")
 if not openrouter_api_key:
     raise RuntimeError("OPENROUTER_API_KEY is missing from the .env file.")

@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/analyze",
+      "destination": "https://ai-data-analyst-9bkn.onrender.com/analyze"
+    },
+    {
+      "source": "/history",
+      "destination": "https://ai-data-analyst-9bkn.onrender.com/history"
+    },
+    {
+      "source": "/clear",
+      "destination": "https://ai-data-analyst-9bkn.onrender.com/clear"
+    }
+  ]
+}

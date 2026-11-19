@@ -13,7 +13,7 @@ from flask import Flask, request, jsonify, render_template, session
 import pandas as pd
 from dotenv import load_dotenv
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="frontend")
 # The session cookie only holds a random id; the history itself lives on the server.
 # Set FLASK_SECRET_KEY in .env to keep browsers "logged in" across server restarts.
 app.secret_key = os.environ.get("FLASK_SECRET_KEY") or secrets.token_hex(32)

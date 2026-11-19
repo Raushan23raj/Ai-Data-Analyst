@@ -8,13 +8,9 @@ import threading
 from collections import OrderedDict
 from pathlib import Path
 from urllib.request import Request, urlopen
-from flask_cors import CORS
-
 from flask import Flask, request, jsonify, render_template, session
 import pandas as pd
 from dotenv import load_dotenv
-
-CORS(app, origins=["https://ai-data-analyst-9bkn.onrender.com/"])
 
 app = Flask(__name__, template_folder="frontend")
 # The session cookie only holds a random id; the history itself lives on the server.

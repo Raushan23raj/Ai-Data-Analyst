@@ -35,14 +35,9 @@ The app answers in a friendly sentence, shows the **raw result table**, and reve
 
 ## 🧩 How it works
 
-```mermaid
-flowchart LR
-    A[Upload CSV + question] --> B[Profile dataset<br/>columns, dtypes, categories]
-    B --> C[LLM writes<br/>Pandas code]
-    C --> D[Run code<br/>on the DataFrame]
-    D --> E[LLM turns result<br/>into a sentence]
-    E --> F[Answer + table + code]
-```
+<p align="center">
+  <img src="assets/how-it-works.png" alt="How AI Data Analyst works" width="100%">
+</p>
 
 1. **Profile**: Pandas reads the CSV and builds a summary of column types and low-cardinality categorical values.
 2. **Generate**: that profile, the recent conversation, and your question go to the LLM, which returns a short Pandas snippet that stores its output in `result`.

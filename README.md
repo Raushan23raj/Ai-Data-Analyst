@@ -35,10 +35,6 @@ The app answers in a friendly sentence, shows the **raw result table**, and reve
 
 ## 🧩 How it works
 
-<p align="center">
-  <img src="how-it-works-flow.png" alt="AI Data Analyst flow" width="100%">
-</p>
-
 1. **Profile**: Pandas reads the CSV and builds a summary of column types and low-cardinality categorical values.
 2. **Generate**: that profile, the recent conversation, and your question go to the LLM, which returns a short Pandas snippet that stores its output in `result`.
 3. **Execute**: the snippet runs against your DataFrame.

@@ -36,7 +36,7 @@ The app answers in a friendly sentence, shows the **raw result table**, and reve
 ## 🧩 How it works
 
 <p align="center">
-  <img src="assets/how-it-works.png" alt="How AI Data Analyst works" width="80%">
+  <img src="how-it-works.png" alt="How AI Data Analyst works" width="80%">
 </p>
 
 1. **Profile**: Pandas reads the CSV and builds a summary of column types and low-cardinality categorical values.

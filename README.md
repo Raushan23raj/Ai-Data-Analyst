@@ -36,10 +36,6 @@ The app answers in a friendly sentence, shows the **raw result table**, and reve
 ## 🧩 How it works
 
 <p align="center">
-  <img src="how-it-works.png" alt="How AI Data Analyst works" width="80%">
-</p>
-
-<p align="center">
   <img src="how-it-works-flow.png" alt="AI Data Analyst flow" width="100%">
 </p>
 
